@@ -1,0 +1,17 @@
+{
+  "name": "mongodb-airports",
+  "version": "1.0.0",
+  "description": "Mongo database of global airport codes",
+  "main": "index.js",
+  "scripts": {
+    "load": "node ./src/loadData.js"
+  },
+  "repository": "https://github.com/obe711/mongodb-airports.git",
+  "author": "Obediah Klopfenstein <obe711@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "mongoose": "^5.13.2",
+    "stream-json": "^1.7.2"
+  }
+}
