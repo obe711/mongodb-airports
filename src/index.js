@@ -1,4 +1,9 @@
-
+/**
+ * 
+ * Node JS use examples
+ * 
+ * 
+ */
 
 function iataAutoSearch(DB, searchString) {
   return DB.Airport.iataAutoSearch(searchString)

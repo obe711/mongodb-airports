@@ -4,7 +4,8 @@ const fs = require('fs');
 const path = require('path');
 
 (async () => {
-  DB = await DBconnect("mongodb://localhost:27017/tbdoffice");
+  /* Mongoose Connection */
+  DB = await DBconnect("mongodb://localhost:27017/MyMongoDB");
 
   loadData(DB);
 
@@ -22,14 +23,14 @@ const loadData = async (DB) => {
   await DB.Airport.deleteMany({});
 
   /* Create Data stream */
-  const pipeline = fs.createReadStream(dataPath)
-    .pipe(StreamObject.withParser());
+  const pipeline = fs.createReadStream(dataPath).pipe(StreamObject.withParser());
 
   /* Pipe each data object */
   pipeline.on('data', data => {
 
     /* Create document from object */
     DB.Airport.create(data.value);
+
     console.log("saved", data.key);
   });
 }
