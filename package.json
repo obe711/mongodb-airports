@@ -4,7 +4,7 @@
   "description": "Mongo database of global airport codes",
   "main": "index.js",
   "scripts": {
-    "load": "node ./src/loadData.js"
+    "createdb": "node ./src/index.js"
   },
   "repository": "https://github.com/obe711/mongodb-airports.git",
   "author": "Obediah Klopfenstein <obe711@gmail.com>",
