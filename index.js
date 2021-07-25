@@ -4,7 +4,7 @@ const DBconnect = require("./src/connection/DB");
 
 (async () => {
   /* Mongoose Connection */
-  const DB = await DBconnect("mongodb://localhost:27017/tbdoffice");
+  const DB = await DBconnect("mongodb://localhost:27017/MyMongoDB");
 
   /* IATA auto complete search */
   const iataRes = await iataAutoSearch(DB, "dfw");
